@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: fastapi-api
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: ./start.sh
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10

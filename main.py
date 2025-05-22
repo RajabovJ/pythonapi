@@ -1,14 +1,23 @@
+import os
+import gdown
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.responses import JSONResponse
 from tensorflow.keras.models import load_model
 import numpy as np
 from PIL import Image
 import io
-import os
+
 app = FastAPI()
-# Modelni yuklash (yo‘lni to‘g‘rilash kerak)
+
 MODEL_PATH = 'skin_cancer_model.h5'
+DRIVE_FILE_ID = '1-2V970NOplej2tN-JxLNLjoRuZekfgRV'  # faqat ID
+
+if not os.path.exists(MODEL_PATH):
+    url = f'https://drive.google.com/uc?id={DRIVE_FILE_ID}'
+    gdown.download(url, MODEL_PATH, quiet=False)
+
 model = load_model(MODEL_PATH)
+
 
 class_names = ['akiec', 'bcc', 'bkl', 'df', 'nv', 'vasc', 'mel']
 class_descriptions = [
