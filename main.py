@@ -1,6 +1,5 @@
 import os
 import gdown
-import numpy as np
 from tensorflow.keras.models import load_model
 from skimage.morphology import remove_small_objects, remove_small_holes
 from PIL import Image
@@ -9,8 +8,6 @@ import base64
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import JSONResponse
 from PIL import Image
-import numpy as np
-import io
 from PIL import Image
 import numpy as np
 import io
