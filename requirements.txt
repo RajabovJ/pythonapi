@@ -1,21 +1,10 @@
-
-
-# fastapi
-# uvicorn[standard]
-# tensorflow
-# pillow
-# gdown
-# scikit-image
-# python-multipart
 fastapi
-uvicorn
-tensorflow
+uvicorn[standard]
 numpy
-pydantic
 pillow
-opencv-python
+tensorflow
+gdown
 scikit-image
 python-multipart
-gdown
 
 
