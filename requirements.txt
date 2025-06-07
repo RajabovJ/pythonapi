@@ -1,11 +1,4 @@
-# fastapi
-# uvicorn
-# numpy
-# pillow
-# tensorflow
-# gdown
-# scikit-image
-# python-multipart
+
 
 # fastapi
 # uvicorn[standard]
@@ -17,11 +10,12 @@
 fastapi==0.111.0
 uvicorn==0.29.0
 tensorflow==2.14.0
+numpy==1.24.3
 pydantic==2.7.1
-numpy>=1.24
 pillow
-scikit-image
 opencv-python
-gdown
+scikit-image
 python-multipart
+gdown
+
 
